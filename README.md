@@ -7,7 +7,13 @@ The script expects:
 - an integer argument N >= 0 that signifies the assumed memory size of the information source
 - input text from stdin
 
+The entropy will be printed to stdout.
+
+
 ##### Example
 ```console
-python3 entropy.py 5 < input.txt
+echo "aaabbbccc" | python3 entropy.py 2
 ```
+This output of this example would be:
+
+```Entropy with memory size 2 = 0.75```
