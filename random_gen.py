@@ -2,13 +2,9 @@
 
 import random
 
-alfabet = 'abcdefghijklmnopqrstuvwxyz'
-alfabet = list(alfabet)
+alfabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789\n'
 N = 5000
 
-output = ''
-for _ in range(N):
-    output += random.choice(alfabet)
-
+output = ''.join(random.choices(alfabet, k=N))
 print(output)
 
