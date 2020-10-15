@@ -7,11 +7,11 @@ from collections import defaultdict
 
 def get_chunk_probs(text, n) -> (dict, dict):
     """
-        Returns a tuple with 2 dicts that maps all of the text's chunks of
+        Returns a tuple with 2 dicts that map all of the text's chunks of
         size n, respectively n+1, to their probabilites.
     """
 
-    total_chunks = len(text) - n  # total amount of chunks of size n
+    total_chunks = len(text) - n  # total amount of chunks of size n + 1 (and also of size n)
     count_l = defaultdict(int)  # counter for larger chunks of size n + 1
     count_s = defaultdict(int)  # counter for smaller chunks of size n
     for i in range(total_chunks):
