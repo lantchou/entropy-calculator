@@ -2,7 +2,7 @@
 
 Python script that calculates the Shannon entropy for regular text files.
 
-### Usage
+## Usage
 The script expects:
 - an integer argument N >= 0 that signifies the assumed memory size of the information source
 - input text from stdin
