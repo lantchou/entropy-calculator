@@ -38,13 +38,13 @@ def compute_entropy(text, n) -> float:
     # compute probabilites for chunks of size n and n+1    
     probs_s, probs_l = get_chunk_probs(text, n)
 
-    # compute entropy from conditional probabilites
+    # compute entropy from conditional probabilities
     entropy = 0
     for chunk_l in probs_l:
         chunk_s = chunk_l[:-1]
-        prob_l = probs_l[chunk_l] # P(Xn, Xn-1, ..., x1)
-        prob_s = probs_s[chunk_s] # P(Xn-1, Xn-2, ..., x1)
-        cond_prob = prob_l / prob_s # P(Xn | Xn-1, Xn-2, ..., x1)
+        prob_l = probs_l[chunk_l]    # P(Xn,   Xn-1, ..., x1)
+        prob_s = probs_s[chunk_s]    # P(Xn-1, Xn-2, ..., x1)
+        cond_prob = prob_l / prob_s  # P(Xn |  Xn-1, Xn-2, ..., x1)
         entropy -= prob_l * math.log2(cond_prob)
 
     return entropy
