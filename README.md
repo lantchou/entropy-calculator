@@ -1,6 +1,6 @@
-# Shannon-entropy calculator
+# Shannon entropy calculator
 
-Python script that calculates the shannon-entropy for regular text files.
+Python script that calculates the Shannon entropy for regular text files.
 
 ### Usage
 The script expects:
