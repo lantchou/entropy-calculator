@@ -7,7 +7,7 @@ from collections import defaultdict
 
 def get_chunk_probs(text, n) -> (dict, dict):
     """
-        Returns a tuple with 2 dicts that maps all of the text's chunks of
+        Returns a tuple with 2 dicts that map all of the text's chunks of
         size n, respectively n+1, to their probabilites.
     """
 
