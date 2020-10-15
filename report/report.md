@@ -2,7 +2,7 @@
 
 __Naam student__ : Liouka Antchougov
 
-### Uitleg over implementatie
+## Uitleg over implementatie
 Ik heb ervoor gekozen om mij te focussen op tekstbestanden. Mijn implementatie is geschreven in Python.
 
 Het programma verwacht twee argumenten:
@@ -20,7 +20,7 @@ Het programma print de entropie van de tekstbron naar standaarduitvoer. De uitvo
 
 ``` Entropy with memory size 0 = 1.8954618442383218```
 
-### Vraag 1
+## Vraag 1
 
 De 3 tekstdocumenten wiens entropieën ik heb gekozen om te vergelijken zijn: een liedje, een hoofdstuk uit Roy Fielding's proefschrift over REST, en een pseudo-random tekst. Deze documenten heb ik gestoken in de folder `input`.
 
