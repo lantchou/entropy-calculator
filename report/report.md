@@ -22,7 +22,7 @@ Het programma print de entropie van de tekstbron naar standaarduitvoer. De uitvo
 
 ## Vraag 1
 
-De 3 tekstdocumenten wiens entropieën ik heb gekozen om te vergelijken zijn: een liedje, een hoofdstuk uit Roy Fielding's proefschrift over REST, en een pseudo-random tekst. Deze documenten heb ik gestoken in de folder `input`.
+De 3 tekstdocumenten wiens entropieën ik heb gekozen om te vergelijken zijn: een liedje, een hoofdstuk uit Roy Fielding's proefschrift over REST, en een pseudo-random tekst. De pseudo-random tekst is gegenereerd met het alfabet `ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789\n` , en bestaat uit 5000 karakters.
 
 
 
@@ -30,15 +30,15 @@ Als we uitgaan van een geheugenloze bron, hebben het liedje en het proefschrift 
 
 
 
-De pseudo-random tekst heeft daarentegen een hogere entropie van 5,97. De tekst heeft nochtans een alfabet dat niet te hard verschilt van die van de Engelse teksten, dus ligt de hoge entropie duidelijk aan het feit dat de kansverdeling van de informatiebron ongeveer uniform is. Dit veroorzaakt dus een entropie die dichtkomt bij de maximale entropie van het alfabet waarmee de tekst gegenereerd is.
+De pseudo-random tekst heeft daarentegen een hogere entropie van 5,97. Deze hoge entropie ligt aan het feit dat de kansverdeling van de informatiebron ongeveer uniform is. De entropie van deze tekst komt dus dicht bij de maximale entropie die je kunt hebben voor een tekst die met dit alfabet is gegenereerd.
 
 ## Vraag 2
 
-Ik heb de entropie berekend en gevisualiseerd voor het geheugen `N` gaande van 0 t.e.m. 15. De vergeleken bestanden `random.txt`, `rest.txt` en `lonely-boy.txt` in de figuur komen respectievelijk overeen met de pseudo-random tekst, het proefschrift en het liedje.
+Ik heb de entropie berekend en gevisualiseerd voor het geheugen `N` gaande van 0 t.e.m. 15. De bestandsnamen van de vergeleken documenten `random.txt`, `rest.txt` en `lonely-boy.txt`  komen respectievelijk overeen met de pseudowillekeurige tekst, het proefschrift en het liedje.
 
 
 
-De entropieën van alle teksten lijken strict-dalend te zijn voor stijgende `N`, en uiteindelijk te convergeren naar 0. We kunnen dit als volgt verklaren: hoe groter het geheugen wordt, hoe groter de kans wordt dat je een bepaald teken tegenkomt gegeven een bepaalde reeks tekens. Dit komt omdat er voor grotere `N` meestal geen structuur meer te vinden is in het geheugen van de tekstbron. Bijvoorbeeld: een gesproken taal heeft veel woorden die beginnen met dezelfde reeks karakters, maar gevolgd worden door een verschillende reeks karakters (bijvoorbeeld "natuurlijk" en "natuurramp"). Omdat de vorming van woorden in gesproken talen een structuur heeft, zul je veel reeksen hebben waarbij er nog veel variatie mogelijk is op het volgende karakter van die reeks. Echter, wanneer het geheugen te groot wordt, verdwijnt deze structuur, en is er weinig kans op variatie van het volgende teken van een bepaalde reeks. Dit betekent dat in de berekening van de conditionele entropie van teksten met een groot geheugen, er vaak het logaritme genomen zal worden van een conditionele kans die bijna 1 is. Hierdoor zullen veel termen van de sommatie bijna 0 zijn, en wordt de sommatie, en dus de entropie, ook bijna 0.
+De entropieën van alle teksten lijken strict-dalend te zijn voor stijgende `N`, en uiteindelijk te convergeren naar 0. We kunnen dit als volgt verklaren: hoe groter het geheugen wordt, hoe groter de kans wordt dat je een bepaald teken tegenkomt gegeven een bepaalde reeks tekens. Dit komt omdat er voor grotere `N` meestal geen structuur meer te vinden is in het geheugen van de tekstbron. Bijvoorbeeld: een gesproken taal heeft veel woorden die beginnen met dezelfde reeks karakters, maar gevolgd worden door een verschillende reeks karakters (bijvoorbeeld "natuurlijk" en "natuurramp"). Omdat de vorming van woorden in gesproken talen een structuur heeft, zul je veel reeksen hebben waarbij er nog veel variatie mogelijk is op het volgende karakter van die reeks. Echter, wanneer het geheugen te groot wordt, verdwijnt deze structuur, en is er weinig kans op variatie op het volgende teken van een bepaalde reeks. Dit betekent dat in de berekening van de conditionele entropie van teksten met een groot geheugen, er vaak het logaritme genomen zal worden van een conditionele kans die bijna 1 is. Hierdoor zullen veel termen van de sommatie bijna 0 zijn, en wordt de sommatie, en dus de entropie, ook bijna 0.
 
 
 
